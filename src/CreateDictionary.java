@@ -15,11 +15,10 @@ public class CreateDictionary {
 
     private static final String urlRoot = "http://scrabble.merriam.com/words/start-with/";
     private static final String chrome = "webdriver.chrome.driver";
-    private static final String visible = " and not(ancestor::div[contains(@style,'display:none')]) and not(ancestor::div[contains(@style,'display: none')])]";
     private static final String driverPath = "/Users/swilkinss2012/Documents/GitHub/WebdriverScript/chromedriver";
-    private static final String expandPath = ".//i[contains(@class, 'fa sbl_min_max fa-plus-square-o')]" + visible;
-    private static final String showAllPath = ".//button[contains(@class, 'sbl_load_all')]" + visible;
-    private static final String wordElementPath = ".//a[contains(@href, '/finder/')]" + visible;
+    private static final String expandPath = ".//i[contains(@class, 'fa sbl_min_max fa-plus-square-o')]";
+    private static final String showAllPath = ".//button[contains(@class, 'sbl_load_all')]";
+    private static final String wordElementPath = ".//a[contains(@href, '/finder/')]";
     private static final String fileName = "scrabbledictionary.txt";
 
     public static void main(String[] args) {
@@ -28,8 +27,8 @@ public class CreateDictionary {
 
         for (char let : alphabet) {
             driver.get(urlRoot + String.valueOf(let));
-            driver.findElements(By.xpath(expandPath)).forEach(WebElement::click);
-            driver.findElements(By.xpath(showAllPath)).forEach(WebElement::click);
+            driver.findElements(By.xpath(expandPath)).stream().filter(WebElement::isDisplayed).collect(Collectors.toList()).forEach(WebElement::click);
+            driver.findElements(By.xpath(showAllPath)).stream().filter(WebElement::isDisplayed).collect(Collectors.toList()).forEach(WebElement::click);
             allWords.addAll(driver.findElements(By.xpath(wordElementPath)).stream().map(WebElement::getText).collect(Collectors.toList()));
         }
 
