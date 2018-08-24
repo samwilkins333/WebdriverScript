@@ -16,7 +16,7 @@ public class CreateDictionary {
     private static final String urlRoot = "http://scrabble.merriam.com/words/start-with/";
     private static final String chrome = "webdriver.chrome.driver";
     private static final String driverPath = "/Users/swilkinss2012/Documents/GitHub/WebdriverScript/chromedriver";
-    private static final String expandPath = ".//i[contains(@class, 'fa sbl_min_max fa-plus-square-o')]";
+    private static final String expandPath = ".//i[contains(@class, 'plus-square-o')]";
     private static final String showAllPath = ".//button[contains(@class, 'sbl_load_all')]";
     private static final String wordElementPath = ".//a[contains(@href, '/finder/')]";
     private static final String fileName = "scrabbledictionary.txt";
@@ -26,11 +26,25 @@ public class CreateDictionary {
         WebDriver driver = new ChromeDriver();
 
         for (char let : alphabet) {
-            driver.get(urlRoot + String.valueOf(let));
-            driver.findElements(By.xpath(expandPath)).stream().filter(WebElement::isDisplayed).collect(Collectors.toList()).forEach(WebElement::click);
-            driver.findElements(By.xpath(showAllPath)).stream().filter(WebElement::isDisplayed).collect(Collectors.toList()).forEach(WebElement::click);
-            List<String> newWords = driver.findElements(By.xpath(wordElementPath)).stream().map(WebElement::getText).collect(Collectors.toList());
-            newWords.forEach(System.out::println);
+            String letter = String.valueOf(let);
+            driver.get(urlRoot + letter);
+
+            System.out.printf("\n*** %s ***\n\n", letter);
+            List<WebElement> categories = driver.findElements(By.xpath(expandPath));
+            System.out.printf("Page has %s categories to expand...", categories.size());
+            List<WebElement> visibleCategories = categories.stream().filter(WebElement::isDisplayed).collect(Collectors.toList());
+            System.out.printf("...of which %s are visible.\n", visibleCategories.size());
+            visibleCategories.forEach(WebElement::click);
+
+            List<WebElement> showAll = driver.findElements(By.xpath(showAllPath));
+            System.out.printf("Page has %s 'show all' buttons...", showAll.size());
+            List<WebElement> visibleShowAll = showAll.stream().filter(WebElement::isDisplayed).collect(Collectors.toList());
+            System.out.printf("...of which %s are visible.\n", visibleShowAll.size());
+            visibleShowAll.forEach(WebElement::click);
+
+            List<String> newWords = driver.findElements(By.xpath(wordElementPath)).stream().map(WebElement::getText).filter(s -> !s.equals("")).collect(Collectors.toList());
+            System.out.printf("Letter %s had %s words\n", let, newWords.size());
+
             allWords.addAll(newWords);
         }
 
