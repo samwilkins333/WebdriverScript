@@ -29,7 +29,9 @@ public class CreateDictionary {
             driver.get(urlRoot + String.valueOf(let));
             driver.findElements(By.xpath(expandPath)).stream().filter(WebElement::isDisplayed).collect(Collectors.toList()).forEach(WebElement::click);
             driver.findElements(By.xpath(showAllPath)).stream().filter(WebElement::isDisplayed).collect(Collectors.toList()).forEach(WebElement::click);
-            allWords.addAll(driver.findElements(By.xpath(wordElementPath)).stream().map(WebElement::getText).collect(Collectors.toList()));
+            List<String> newWords = driver.findElements(By.xpath(wordElementPath)).stream().map(WebElement::getText).collect(Collectors.toList());
+            newWords.forEach(System.out::println);
+            allWords.addAll(newWords);
         }
 
         try {
