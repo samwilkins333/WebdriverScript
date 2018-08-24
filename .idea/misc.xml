@@ -5,6 +5,7 @@
       <list>
         <option value="$PROJECT_DIR$/okhttp/pom.xml" />
         <option value="$PROJECT_DIR$/Apache Commons IO/pom.xml" />
+        <option value="$PROJECT_DIR$/textmagicjavasdk/pom.xml" />
       </list>
     </option>
   </component>

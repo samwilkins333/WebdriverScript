@@ -5,6 +5,7 @@
       <module fileurl="file://$PROJECT_DIR$/Apache Commons IO/Apache Commons IO.iml" filepath="$PROJECT_DIR$/Apache Commons IO/Apache Commons IO.iml" />
       <module fileurl="file://$PROJECT_DIR$/WebdriverScript.iml" filepath="$PROJECT_DIR$/WebdriverScript.iml" />
       <module fileurl="file://$PROJECT_DIR$/okhttp/okhttp.iml" filepath="$PROJECT_DIR$/okhttp/okhttp.iml" />
+      <module fileurl="file://$PROJECT_DIR$/textmagicjavasdk/textmagicjavasdk.iml" filepath="$PROJECT_DIR$/textmagicjavasdk/textmagicjavasdk.iml" />
     </modules>
   </component>
 </project>

@@ -18,12 +18,14 @@
         <outputRelativeToContentRoot value="true" />
         <module name="Apache Commons IO" />
         <module name="okhttp" />
+        <module name="textmagicjavasdk" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="Apache Commons IO" target="1.5" />
       <module name="guava" target="1.5" />
       <module name="okhttp" target="1.5" />
+      <module name="textmagicjavasdk" target="1.5" />
     </bytecodeTargetLevel>
   </component>
 </project>
