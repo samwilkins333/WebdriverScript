@@ -7,6 +7,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.interactions.Actions;
 
 import java.io.PrintWriter;
+import java.time.Duration;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -22,14 +23,15 @@ public class CreateDictionary {
             PrintWriter writer = new PrintWriter(fileName);
 
             System.setProperty(chrome, driverPath);
-            WebDriver driver = new ChromeDriver();
-            Actions actions = new Actions(driver);
 
             for (char[] subset : alphabet) {
+                WebDriver driver = new ChromeDriver();
+                Actions actions = new Actions(driver);
                 int i = 0;
 
                 for (char let : subset) {
                     String letter = String.valueOf(let);
+                    System.out.printf("\n*** %s ***\n\n", letter.toUpperCase());
                     driver.get(urlRoot + letter);
 
                     i++;
@@ -38,9 +40,7 @@ public class CreateDictionary {
                         driver.findElement(By.xpath(dismissCookiePath)).click();
                     }
 
-                    System.out.printf("\n*** %s ***\n\n", letter.toUpperCase());
                     List<WebElement> categories = driver.findElements(By.xpath(expandPath));
-                    System.out.printf("Page has %s categories to expand.\n", categories.size());
                     categories.forEach(webElement -> {
                         actions.moveToElement(webElement).pause(pause).perform();
                         webElement.click();
@@ -48,7 +48,6 @@ public class CreateDictionary {
                     });
 
                     List<WebElement> showAll = driver.findElements(By.xpath(showAllPath));
-                    System.out.printf("Page has %s 'show all' buttons.\n", showAll.size());
                     showAll.forEach(webElement -> {
                         actions.moveToElement(webElement).pause(pause).perform();
                         webElement.click();
