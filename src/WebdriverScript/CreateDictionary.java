@@ -1,8 +1,10 @@
 package WebdriverScript;
 
+import com.textmagic.sms.TextMagicMessageService;
 import com.textmagic.sms.exception.ServiceBackendException;
 import com.textmagic.sms.exception.ServiceTechnicalException;
 import org.openqa.selenium.By;
+import org.openqa.selenium.TimeoutException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -10,19 +12,23 @@ import org.openqa.selenium.interactions.Actions;
 
 import java.io.FileNotFoundException;
 import java.io.PrintWriter;
+import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
 
-import com.textmagic.sms.*;
 import static WebdriverScript.Constants.*;
 
 public class CreateDictionary {
 
+    private static TextMagicMessageService service;
+
     public static void main(String[] args) {
+        long startTime = System.currentTimeMillis();
+
         try {
 
             PrintWriter writer = new PrintWriter(fileName);
-            TextMagicMessageService service = new TextMagicMessageService(username, password);
+            service = new TextMagicMessageService(username, password);
 
             System.setProperty(chrome, driverPath);
             WebDriver driver = new ChromeDriver();
@@ -65,9 +71,28 @@ public class CreateDictionary {
 
             writer.close();
 
+            long elapsedTime = (System.currentTimeMillis() - startTime) / 1000;
+            String message = String.format("Dictionary extraction complete! Process took %s seconds!", elapsedTime);
+            service.send(message, recipient);
+
         } catch (FileNotFoundException | ServiceBackendException | ServiceTechnicalException e) {
 
             e.printStackTrace();
+
+        } catch (TimeoutException t) {
+
+            try {
+
+                long elapsedTime = (System.currentTimeMillis() - startTime) / 1000;
+                String stackTrace = Arrays.toString(t.getStackTrace());
+                String message = String.format("*** Oh no! Script timed out after %s seconds *** \n\n%s", elapsedTime, stackTrace);
+                service.send(message, recipient);
+
+            } catch (ServiceBackendException | ServiceTechnicalException e) {
+
+                e.printStackTrace();
+
+            }
 
         }
     }
