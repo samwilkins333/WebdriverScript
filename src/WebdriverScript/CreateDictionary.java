@@ -84,8 +84,7 @@ public class CreateDictionary {
             try {
 
                 long elapsedTime = (System.currentTimeMillis() - startTime) / 1000;
-                String stackTrace = Arrays.toString(t.getStackTrace());
-                String message = String.format("*** Oh no! Script timed out after %s seconds *** \n\n%s", elapsedTime, stackTrace);
+                String message = String.format("*** Oh no! Script timed out after %s seconds ***", elapsedTime);
                 service.send(message, recipient);
 
             } catch (ServiceBackendException | ServiceTechnicalException e) {

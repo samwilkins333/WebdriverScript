@@ -9,7 +9,7 @@ class Constants {
 
     static final String urlRoot = "http://scrabble.merriam.com/words/start-with/";
     static final String chrome = "webdriver.chrome.driver";
-    static final String fileName = "scrabbledictionary.txt";
+    static final String fileName = "scrabbledictionaryD.txt";
 
     static final String dismissCookiePath = ".//a[@aria-label='dismiss cookie message']";
     static final String driverPath = "/Users/swilkinss2012/Documents/GitHub/WebdriverScript/chromedriver";
