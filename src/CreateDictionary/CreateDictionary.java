@@ -1,4 +1,4 @@
-package WebdriverScript;
+package CreateDictionary;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -7,11 +7,10 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.interactions.Actions;
 
 import java.io.PrintWriter;
-import java.time.Duration;
 import java.util.List;
 import java.util.stream.Collectors;
 
-import static WebdriverScript.Constants.*;
+import static CreateDictionary.Constants.*;
 
 public class CreateDictionary {
 

@@ -2,8 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ddcb0488-833e-46b0-b81c-d5b44f7c4c69" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/scrabbledictionaryfinal.txt" beforeDir="false" afterPath="$PROJECT_DIR$/scrabbledictionaryfinal.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/WebdriverScript/Constants.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/WebdriverScript/Constants.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/CreateDictionary/ConfirmCount.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dictionaries/swilkinss2012.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dictionaries/swilkinss2012.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/WebdriverScript/WebdriverScript/Constants.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/WebdriverScript/WebdriverScript/CreateDictionary.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scrabbledictionaryfinal.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/WebdriverScript/Constants.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/CreateDictionary/Constants.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/WebdriverScript/CreateDictionary.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/CreateDictionary/CreateDictionary.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/guava/target/" />
@@ -20,7 +26,7 @@
     <session id="-1730975750">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="10" />
+          <entry key="project.closed" value="11" />
           <entry key="project.open.time.16" value="2" />
           <entry key="project.open.time.17" value="3" />
           <entry key="project.open.time.18" value="2" />
@@ -34,14 +40,14 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="java" value="4507" />
+          <entry key="java" value="5462" />
           <entry key="txt" value="54" />
           <entry key="xml" value="4" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="4507" />
+          <entry key="JAVA" value="5462" />
           <entry key="PLAIN_TEXT" value="54" />
           <entry key="XML" value="4" />
         </counts>
@@ -49,14 +55,14 @@
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="class" value="1" />
-          <entry key="java" value="12" />
+          <entry key="java" value="20" />
           <entry key="xml" value="5" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="CLASS" value="1" />
-          <entry key="JAVA" value="12" />
+          <entry key="JAVA" value="20" />
           <entry key="XML" value="5" />
         </counts>
       </usages-collector>
@@ -67,20 +73,29 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/WebdriverScript/CreateDictionary.java">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/CreateDictionary/CreateDictionary.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="343">
-              <caret line="34" column="49" selection-start-line="34" selection-start-column="49" selection-end-line="34" selection-end-column="49" />
+            <state relative-caret-position="318">
+              <caret line="32" column="20" selection-start-line="32" selection-start-column="20" selection-end-line="32" selection-end-column="80" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/CreateDictionary/ConfirmCount.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="360">
+              <caret line="32" column="52" selection-start-line="32" selection-start-column="52" selection-end-line="32" selection-end-column="52" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/WebdriverScript/Constants.java">
+        <entry file="file://$PROJECT_DIR$/src/CreateDictionary/Constants.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="314">
-              <caret line="26" selection-start-line="26" selection-end-line="26" />
+            <state relative-caret-position="445">
+              <caret line="36" column="1" lean-forward="true" selection-start-line="36" selection-start-column="1" selection-end-line="36" selection-end-column="1" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -93,6 +108,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Singleton" />
         <option value="Class" />
       </list>
     </option>
@@ -121,6 +137,11 @@
         <option value="$PROJECT_DIR$/src/Constants.java" />
         <option value="$PROJECT_DIR$/src/WebdriverScript/CreateDictionary.java" />
         <option value="$PROJECT_DIR$/src/WebdriverScript/Constants.java" />
+        <option value="$PROJECT_DIR$/src/LineCounter/LineCounter.java" />
+        <option value="$PROJECT_DIR$/src/CountConfirm/CountConfirm.java" />
+        <option value="$PROJECT_DIR$/src/CreateDictionary/CreateDictionary.java" />
+        <option value="$PROJECT_DIR$/src/CreateDictionary/Constants.java" />
+        <option value="$PROJECT_DIR$/src/CreateDictionary/ConfirmCount.java" />
       </list>
     </option>
   </component>
@@ -149,7 +170,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -157,12 +178,23 @@
               <item name="WebdriverScript" type="b2602c69:ProjectViewProjectNode" />
               <item name="WebdriverScript" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="WebdriverScript" type="b2602c69:ProjectViewProjectNode" />
+              <item name="WebdriverScript" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="WebdriverScript" type="b2602c69:ProjectViewProjectNode" />
+              <item name="WebdriverScript" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="CreateDictionary" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
       <pane id="AndroidView" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -171,7 +203,7 @@
     <property name="Repository.Attach.Sources" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1535169174177" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1535262842745" />
     <property name="last_directory_selection" value="$PROJECT_DIR$/src" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
@@ -190,9 +222,22 @@
       </list>
     </option>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.ConfirmCount">
+    <configuration name="ConfirmCount" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="CreateDictionary.ConfirmCount" />
+      <module name="WebdriverScript" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="CreateDictionary.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Main" type="Application" factoryName="Application" temporary="true">
-      <option name="MAIN_CLASS_NAME" value="WebdriverScript.CreateDictionary" />
+      <option name="MAIN_CLASS_NAME" value="CreateDictionary.CreateDictionary" />
       <module name="WebdriverScript" />
       <RunnerSettings RunnerId="Run" />
       <ConfigurationWrapper RunnerId="Run" />
@@ -200,8 +245,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <list>
+      <item itemvalue="Application.Main" />
+      <item itemvalue="Application.ConfirmCount" />
+    </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.ConfirmCount" />
         <item itemvalue="Application.Main" />
       </list>
     </recent_temporary>
@@ -226,7 +276,7 @@
       <workItem from="1535145907597" duration="1239000" />
       <workItem from="1535147923768" duration="4112000" />
       <workItem from="1535170059964" duration="2310000" />
-      <workItem from="1535189900255" duration="3119000" />
+      <workItem from="1535189900255" duration="6404000" />
     </task>
     <task id="LOCAL-00001" summary="More print lines for feedback">
       <created>1535096345166</created>
@@ -246,13 +296,13 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="43673000" />
+    <option name="totallyTimeSpent" value="46958000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2746781" />
+      <window_info content_ui="combo" id="Project" order="0" weight="0.2746781" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -343,20 +393,72 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/WebdriverScript/Constants.java">
+    <entry file="file://$PROJECT_DIR$/src/LineCounter/Test.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="314">
-          <caret line="26" selection-start-line="26" selection-end-line="26" />
+        <state relative-caret-position="30">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk-9.0.1.jdk/Contents/Home/lib/src.zip!/java.base/java/io/BufferedReader.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="268">
+          <caret line="390" column="18" selection-start-line="390" selection-start-column="18" selection-end-line="390" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk-9.0.1.jdk/Contents/Home/lib/src.zip!/java.base/java/lang/ClassLoader.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="1758" column="30" selection-start-line="1758" selection-start-column="30" selection-end-line="1758" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk-9.0.1.jdk/Contents/Home/lib/src.zip!/java.base/java/io/Reader.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="77" selection-start-line="77" selection-end-line="77" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/LineCounter/LineCounter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="63" selection-start-line="8" selection-start-column="63" selection-end-line="8" selection-end-column="63" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/WebdriverScript/CreateDictionary.java">
+    <entry file="file://$PROJECT_DIR$/src/CountConfirm/CountConfirm.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="343">
-          <caret line="34" column="49" selection-start-line="34" selection-start-column="49" selection-end-line="34" selection-end-column="49" />
+        <state relative-caret-position="75">
+          <caret line="5" column="8" selection-start-line="5" selection-start-column="8" selection-end-line="5" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/CreateDictionary/Constants.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="445">
+          <caret line="36" column="1" lean-forward="true" selection-start-line="36" selection-start-column="1" selection-end-line="36" selection-end-column="1" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/CreateDictionary/CreateDictionary.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="318">
+          <caret line="32" column="20" selection-start-line="32" selection-start-column="20" selection-end-line="32" selection-end-column="80" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/CreateDictionary/ConfirmCount.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="32" column="52" selection-start-line="32" selection-start-column="52" selection-end-line="32" selection-end-column="52" />
         </state>
       </provider>
     </entry>
