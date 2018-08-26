@@ -19,7 +19,7 @@ public class CreateDictionary {
 
         try {
 
-            PrintWriter writer = new PrintWriter(fileName);
+            PrintWriter writer = new PrintWriter(dictWriteFileName);
 
             System.setProperty(chrome, driverPath);
 
@@ -31,7 +31,7 @@ public class CreateDictionary {
                 for (char let : subset) {
                     String letter = String.valueOf(let);
                     System.out.printf("\n*** %s ***\n\n", letter.toUpperCase());
-                    driver.get(urlRoot + letter);
+                    driver.get(scrabbleRoot + letter);
 
                     i++;
                     if (i == 1) {

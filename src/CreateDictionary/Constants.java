@@ -24,9 +24,11 @@ class Constants {
     static final Duration pause = Duration.ofSeconds(1);
     static final Duration cookieLoad = Duration.ofSeconds(7);
 
-    static final String urlRoot = "http://scrabble.merriam.com/words/start-with/";
+    static final String scrabbleRoot = "http://scrabble.merriam.com/words/start-with/";
+    static final String merriamRoot = "https://www.merriam-webster.com/dictionary/";
     static final String chrome = "webdriver.chrome.driver";
-    static final String fileName = "scrabbledictionary2.txt";
+    static final String dictWriteFileName = "scrabbledictionary.txt";
+    static final String defWriteFileName = "scrabbledefinitions.txt";
 
     static final String dismissCookiePath = ".//a[@aria-label='dismiss cookie message']";
     static final String driverPath = "/Users/swilkinss2012/Documents/GitHub/WebdriverScript/chromedriver";
@@ -34,4 +36,7 @@ class Constants {
     static final String showAllPath = ".//button[contains(@class, 'sbl_load_all')]";
     static final String wordElementPath = ".//a[contains(@href, '/finder/')]";
     static final String countPath = ".//span[contains(text(), 'found')]";
+
+    static final String definitionPath = "//span[contains(@class, 'dt')]";
+    static final String partPath = "//a[contains(@class, 'important-blue-link')]";
 }
