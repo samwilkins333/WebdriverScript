@@ -1,5 +1,8 @@
 package CourseRegistration;
 
+import javafx.application.Application;
+import javafx.scene.Scene;
+import javafx.stage.Stage;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -11,10 +14,23 @@ import java.util.Iterator;
 import java.util.List;
 import static CourseRegistration.Constants.*;
 
+public class CourseRegistration extends Application {
 
-public class CourseRegistration {
+    @Override
+    public void start(Stage primaryStage) {
+        PaneOrganizer organizer = new PaneOrganizer();
+
+        Stage stage = new Stage();
+        Scene scene = new Scene(organizer.root, 800, 800);
+        stage.setScene(scene);
+        stage.setResizable(false);
+        stage.setTitle("Registration Wizard");
+        stage.show();
+    }
 
     public static void main(String[] args) {
+        launch(args);
+
         System.setProperty(chrome, driverPath);
         WebDriver driver = new ChromeDriver();
         Actions actions = new Actions(driver);
