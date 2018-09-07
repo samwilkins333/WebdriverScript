@@ -191,6 +191,8 @@ public class PaneOrganizer {
             listViewItems.add(prefix + crn);
             crnMapping.put(crn, operation);
             crnEntryField.clear();
+
+            crnEntryField.requestFocus();
         };
     }
 
