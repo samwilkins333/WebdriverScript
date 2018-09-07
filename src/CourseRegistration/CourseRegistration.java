@@ -11,7 +11,7 @@ public class CourseRegistration extends Application {
         PaneOrganizer organizer = new PaneOrganizer();
 
         Stage stage = new Stage();
-        Scene scene = new Scene(organizer.root, 800, 800);
+        Scene scene = new Scene(organizer.root, 400, 800);
         stage.setScene(scene);
         stage.setResizable(false);
         stage.setTitle("Registration Wizard");

@@ -2,7 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ddcb0488-833e-46b0-b81c-d5b44f7c4c69" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/CourseRegistration/Operation.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dictionaries/swilkinss2012.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dictionaries/swilkinss2012.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/WebdriverScript/CourseRegistration/CourseRegistration.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/WebdriverScript/CourseRegistration/CourseRegistration.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/WebdriverScript/CourseRegistration/PaneOrganizer$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/WebdriverScript/CourseRegistration/PaneOrganizer$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/WebdriverScript/CourseRegistration/PaneOrganizer.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/WebdriverScript/CourseRegistration/PaneOrganizer.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/CourseRegistration/CourseRegistration.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/CourseRegistration/CourseRegistration.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/CourseRegistration/PaneOrganizer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/CourseRegistration/PaneOrganizer.java" afterDir="false" />
     </list>
@@ -21,31 +26,31 @@
     <session id="-1730975750">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="15" />
+          <entry key="project.closed" value="18" />
           <entry key="project.open.time.16" value="2" />
           <entry key="project.open.time.17" value="4" />
           <entry key="project.open.time.18" value="2" />
-          <entry key="project.open.time.19" value="2" />
+          <entry key="project.open.time.19" value="3" />
           <entry key="project.open.time.2" value="1" />
-          <entry key="project.open.time.20" value="1" />
+          <entry key="project.open.time.20" value="2" />
           <entry key="project.open.time.21" value="3" />
           <entry key="project.open.time.22" value="1" />
           <entry key="project.open.time.26" value="1" />
           <entry key="project.open.time.32" value="1" />
           <entry key="project.open.time.7" value="1" />
-          <entry key="project.opened" value="19" />
+          <entry key="project.opened" value="21" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="java" value="9343" />
+          <entry key="java" value="11718" />
           <entry key="txt" value="54" />
           <entry key="xml" value="4" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="9343" />
+          <entry key="JAVA" value="11718" />
           <entry key="PLAIN_TEXT" value="54" />
           <entry key="XML" value="4" />
         </counts>
@@ -53,14 +58,14 @@
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="class" value="1" />
-          <entry key="java" value="24" />
+          <entry key="java" value="26" />
           <entry key="xml" value="5" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="CLASS" value="1" />
-          <entry key="JAVA" value="24" />
+          <entry key="JAVA" value="26" />
           <entry key="XML" value="5" />
         </counts>
       </usages-collector>
@@ -74,12 +79,10 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/CourseRegistration/CourseRegistration.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="60">
-              <caret line="4" column="26" selection-start-line="4" selection-start-column="26" selection-end-line="4" selection-end-column="26" />
+            <state relative-caret-position="164">
+              <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#900#901#0" expanded="true" />
-                <element signature="e#928#929#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -88,11 +91,20 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/CourseRegistration/PaneOrganizer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="242">
-              <caret line="62" lean-forward="true" selection-start-line="62" selection-end-line="62" />
+            <state relative-caret-position="330">
+              <caret line="191" column="9" lean-forward="true" selection-start-line="191" selection-start-column="9" selection-end-line="191" selection-end-column="9" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/CourseRegistration/Operation.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="60">
+              <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
             </state>
           </provider>
         </entry>
@@ -104,6 +116,7 @@
       <list>
         <option value="Singleton" />
         <option value="Class" />
+        <option value="Enum" />
       </list>
     </option>
   </component>
@@ -112,9 +125,11 @@
       <find>private</find>
       <find>constants</find>
       <find>text()</find>
+      <find>toDrop</find>
     </findStrings>
     <replaceStrings>
       <replace>public</replace>
+      <replace>password</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -139,7 +154,9 @@
         <option value="$PROJECT_DIR$/src/CreateDictionary/Constants.java" />
         <option value="$PROJECT_DIR$/src/CreateDictionary/MapDefinitions.java" />
         <option value="$PROJECT_DIR$/src/CourseRegistration/Constants.java" />
+        <option value="$PROJECT_DIR$/src/CourseRegistration/crnEntry.java" />
         <option value="$PROJECT_DIR$/src/CourseRegistration/CourseRegistration.java" />
+        <option value="$PROJECT_DIR$/src/CourseRegistration/Operation.java" />
         <option value="$PROJECT_DIR$/src/CourseRegistration/PaneOrganizer.java" />
       </list>
     </option>
@@ -191,6 +208,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="AndroidView" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -220,7 +238,6 @@
         </subPane>
       </pane>
       <pane id="PackagesPane" />
-      <pane id="AndroidView" />
       <pane id="Scope" />
     </panes>
   </component>
@@ -230,12 +247,17 @@
     <property name="Repository.Attach.Sources" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1536118986305" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1536294928292" />
     <property name="last_directory_selection" value="$PROJECT_DIR$/src" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="reference.settings.project.maven.repository.indices" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="CourseRegistration" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -338,7 +360,9 @@
       <workItem from="1535309950456" duration="284000" />
       <workItem from="1536098431156" duration="5317000" />
       <workItem from="1536112528996" duration="6290000" />
-      <workItem from="1536163736979" duration="5058000" />
+      <workItem from="1536163736979" duration="5127000" />
+      <workItem from="1536207303346" duration="270000" />
+      <workItem from="1536247249181" duration="9318000" />
     </task>
     <task id="LOCAL-00001" summary="More print lines for feedback">
       <created>1535096345166</created>
@@ -358,13 +382,13 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="67023000" />
+    <option name="totallyTimeSpent" value="76680000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="827" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.28183118" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.28898427" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -373,9 +397,9 @@
       <window_info id="Learn" order="6" />
       <window_info id="Favorites" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info active="true" anchor="bottom" id="Find" order="1" visible="true" weight="0.3292517" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.3292517" />
-      <window_info active="true" anchor="bottom" id="Debug" order="3" sideWeight="0.49928468" visible="true" weight="0.39863947" />
+      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49928468" weight="0.39863947" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -483,9 +507,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="720">
           <caret line="58" selection-start-line="58" selection-end-line="75" selection-end-column="9" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -510,32 +531,44 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/CourseRegistration/CourseRegistration.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="26" selection-start-line="4" selection-start-column="26" selection-end-line="4" selection-end-column="26" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#900#901#0" expanded="true" />
-            <element signature="e#928#929#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/CreateDictionary/Constants.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="435">
           <caret line="31" selection-start-line="31" selection-end-line="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/CourseRegistration/crnEntry.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="12" column="12" selection-start-line="12" selection-start-column="12" selection-end-line="12" selection-end-column="12" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/CourseRegistration/CourseRegistration.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="164">
+          <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/CourseRegistration/Operation.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/CourseRegistration/PaneOrganizer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="242">
-          <caret line="62" lean-forward="true" selection-start-line="62" selection-end-line="62" />
+        <state relative-caret-position="330">
+          <caret line="191" column="9" lean-forward="true" selection-start-line="191" selection-start-column="9" selection-end-line="191" selection-end-column="9" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
