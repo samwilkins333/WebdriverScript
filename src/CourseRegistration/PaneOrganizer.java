@@ -264,8 +264,11 @@ public class PaneOrganizer {
                     }
                     break;
                 case DropClass:
-                    Select dropdown = new Select(driver.findElement(By.xpath(".//select[./ancestor::td[./following-sibling::td[./child::input[contains(@value, '" + crn.getKey() + "')]]]]")));
-                    dropdown.selectByVisibleText("DROP");
+                    List<WebElement> candidates = driver.findElements(By.xpath(".//select[./ancestor::td[./following-sibling::td[./child::input[contains(@value, '" + crn.getKey() + "')]]]]"));
+                    if (candidates.isEmpty()) break;
+
+                    Select selectable = new Select(candidates.get(0));
+                    selectable.selectByVisibleText("DROP");
                     break;
             }
         }
