@@ -5,14 +5,13 @@ import javafx.scene.Scene;
 import javafx.stage.Stage;
 
 public class CourseRegistration extends Application {
+    public Stage stage = new Stage();
 
     @Override
     public void start(Stage primaryStage) {
         PaneOrganizer organizer = new PaneOrganizer();
 
-        Stage stage = new Stage();
-        Scene scene = new Scene(organizer.root, 400, 800);
-        stage.setScene(scene);
+        stage.setScene(new Scene(organizer.root, 400, 800));
         stage.setResizable(false);
         stage.setTitle("Registration Wizard");
         stage.show();
