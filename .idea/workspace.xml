@@ -2,6 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ddcb0488-833e-46b0-b81c-d5b44f7c4c69" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/CourseRegistration/Operation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/CourseRegistration/Operation.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/CourseRegistration/PaneOrganizer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/CourseRegistration/PaneOrganizer.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -19,9 +21,9 @@
     <session id="-1730975750">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="19" />
+          <entry key="project.closed" value="21" />
           <entry key="project.open.time.16" value="2" />
-          <entry key="project.open.time.17" value="4" />
+          <entry key="project.open.time.17" value="5" />
           <entry key="project.open.time.18" value="2" />
           <entry key="project.open.time.19" value="3" />
           <entry key="project.open.time.2" value="1" />
@@ -33,19 +35,19 @@
           <entry key="project.open.time.28" value="1" />
           <entry key="project.open.time.32" value="1" />
           <entry key="project.open.time.7" value="1" />
-          <entry key="project.opened" value="23" />
+          <entry key="project.opened" value="24" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="java" value="14021" />
+          <entry key="java" value="14594" />
           <entry key="txt" value="54" />
           <entry key="xml" value="4" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="14021" />
+          <entry key="JAVA" value="14594" />
           <entry key="PLAIN_TEXT" value="54" />
           <entry key="XML" value="4" />
         </counts>
@@ -74,7 +76,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/CourseRegistration/CourseRegistration.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
+            <state relative-caret-position="135">
               <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -86,8 +88,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/CourseRegistration/PaneOrganizer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="217">
-              <caret line="269" column="61" selection-start-line="269" selection-start-column="61" selection-end-line="269" selection-end-column="61" />
+            <state relative-caret-position="253">
+              <caret line="211" column="35" lean-forward="true" selection-start-line="211" selection-start-column="35" selection-end-line="211" selection-end-column="35" />
             </state>
           </provider>
         </entry>
@@ -95,8 +97,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/CourseRegistration/Operation.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="60">
-              <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+            <state relative-caret-position="75">
+              <caret line="5" column="17" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="17" />
             </state>
           </provider>
         </entry>
@@ -121,11 +123,13 @@
       <find>setfon</find>
       <find>&quot;crn&quot;</find>
       <find>passwordField</find>
+      <find>drop</find>
     </findStrings>
     <replaceStrings>
       <replace>public</replace>
       <replace>password</replace>
       <replace>advisingPinField</replace>
+      <replace>submit</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -151,8 +155,8 @@
         <option value="$PROJECT_DIR$/src/CreateDictionary/MapDefinitions.java" />
         <option value="$PROJECT_DIR$/src/CourseRegistration/Constants.java" />
         <option value="$PROJECT_DIR$/src/CourseRegistration/crnEntry.java" />
-        <option value="$PROJECT_DIR$/src/CourseRegistration/Operation.java" />
         <option value="$PROJECT_DIR$/src/CourseRegistration/CourseRegistration.java" />
+        <option value="$PROJECT_DIR$/src/CourseRegistration/Operation.java" />
         <option value="$PROJECT_DIR$/src/CourseRegistration/PaneOrganizer.java" />
       </list>
     </option>
@@ -360,7 +364,8 @@
       <workItem from="1536207303346" duration="270000" />
       <workItem from="1536247249181" duration="9318000" />
       <workItem from="1536295154535" duration="8336000" />
-      <workItem from="1536303603712" duration="2617000" />
+      <workItem from="1536303603712" duration="2837000" />
+      <workItem from="1536323912582" duration="3005000" />
     </task>
     <task id="LOCAL-00001" summary="More print lines for feedback">
       <created>1535096345166</created>
@@ -380,7 +385,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="87633000" />
+    <option name="totallyTimeSpent" value="90858000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="827" extended-state="0" />
@@ -397,7 +402,7 @@
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info active="true" anchor="bottom" id="Find" order="1" visible="true" weight="0.3292517" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.3292517" />
-      <window_info active="true" anchor="bottom" id="Debug" order="3" sideWeight="0.49928468" visible="true" weight="0.39863947" />
+      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49928468" weight="0.39863947" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -427,6 +432,18 @@
     <MESSAGE value="More print lines for feedback" />
     <MESSAGE value="Sms integration" />
     <option name="LAST_COMMIT_MESSAGE" value="Sms integration" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/CourseRegistration/PaneOrganizer.java</url>
+          <line>284</line>
+          <properties />
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
     <entry file="jar://$USER_HOME$/Downloads/selenium-java-3/client-combined-3.14.0-sources.jar!/org/openqa/selenium/remote/RemoteWebDriver.java" />
@@ -537,9 +554,16 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/CourseRegistration/crnEntry.java" />
+    <entry file="file://$PROJECT_DIR$/src/CourseRegistration/Operation.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="17" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/CourseRegistration/CourseRegistration.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
+        <state relative-caret-position="135">
           <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -547,17 +571,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/CourseRegistration/Operation.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/CourseRegistration/PaneOrganizer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="217">
-          <caret line="269" column="61" selection-start-line="269" selection-start-column="61" selection-end-line="269" selection-end-column="61" />
+        <state relative-caret-position="253">
+          <caret line="211" column="35" lean-forward="true" selection-start-line="211" selection-start-column="35" selection-end-line="211" selection-end-column="35" />
         </state>
       </provider>
     </entry>

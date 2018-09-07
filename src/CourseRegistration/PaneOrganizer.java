@@ -60,13 +60,20 @@ public class PaneOrganizer {
         crnListView.setLayoutY(275);
         crnListView.setPrefSize(275, 350);
         crnListView.setEditable(true);
-
         crnListView.setItems(listViewItems);
+        crnListView.setOnMouseClicked(event -> {
+            if (event.getClickCount() == 2) {
+                ObservableList<String> selectedItems = crnListView.getSelectionModel().getSelectedItems();
+                listViewItems.removeAll(selectedItems);
+                selectedItems.forEach(i -> crnMapping.remove(i));
+            }
+        });
 
         Label title = new Label("Registration Wizard");
         title.setFont(Font.font("Georgia", FontWeight.BOLD, 25));
         title.setLayoutY(55);
         title.setLayoutX(70);
+        title.requestFocus();
 
         usernameField = new TextField();
         usernameField.setPromptText("Brown username...");
@@ -86,6 +93,15 @@ public class PaneOrganizer {
         advisingPinField.setLayoutY(195);
         advisingPinField.setPrefWidth(275);
 
+        crnEntryField = new TextField();
+        crnEntryField.setPromptText("CRN (12345)");
+        crnEntryField.setLayoutX(62.5);
+        crnEntryField.setLayoutY(235);
+        crnEntryField.setPrefWidth(100);
+        crnEntryField.setOnKeyPressed(event -> {
+            if (event.getCode() == KeyCode.ESCAPE) crnEntryField.clear();
+        });
+
         Line usernameFailure = new Line(64, 145, 336, 145);
         usernameFailure.setStroke(Color.RED);
         usernameFailure.setStrokeWidth(2);
@@ -104,7 +120,7 @@ public class PaneOrganizer {
         pinFailure.setStrokeLineCap(StrokeLineCap.ROUND);
         pinFailure.setOpacity(0);
 
-        Line crnFailure = new Line(64, 265, 188.5, 265);
+        Line crnFailure = new Line(64, 265, 159.5, 265);
         crnFailure.setStroke(Color.RED);
         crnFailure.setStrokeWidth(2);
         crnFailure.setStrokeLineCap(StrokeLineCap.ROUND);
@@ -115,24 +131,32 @@ public class PaneOrganizer {
         usernameFail.setToValue(1);
         usernameFail.setAutoReverse(true);
         usernameFail.setCycleCount(4);
+        usernameFail.setOnFinished(event -> usernameField.requestFocus());
 
         passwordFail = new FadeTransition(Duration.millis(100), passwordFailure);
         passwordFail.setFromValue(0);
         passwordFail.setToValue(1);
         passwordFail.setAutoReverse(true);
         passwordFail.setCycleCount(4);
+        passwordFail.setOnFinished(event -> {
+            if (!usernameField.getText().isEmpty()) passwordField.requestFocus();
+        });
 
         pinFail = new FadeTransition(Duration.millis(100), pinFailure);
         pinFail.setFromValue(0);
         pinFail.setToValue(1);
         pinFail.setAutoReverse(true);
         pinFail.setCycleCount(4);
+        pinFail.setOnFinished(event -> {
+            if (!usernameField.getText().isEmpty() && !passwordField.getText().isEmpty()) advisingPinField.requestFocus();
+        });
 
         crnFail = new FadeTransition(Duration.millis(100), crnFailure);
         crnFail.setFromValue(0);
         crnFail.setToValue(1);
         crnFail.setAutoReverse(true);
         crnFail.setCycleCount(4);
+        crnFail.setOnFinished(event -> crnEntryField.requestFocus());
 
         emptyListFail = new FadeTransition(Duration.millis(100), crnListView);
         emptyListFail.setFromValue(1);
@@ -140,28 +164,26 @@ public class PaneOrganizer {
         emptyListFail.setAutoReverse(true);
         emptyListFail.setCycleCount(4);
 
-        crnEntryField = new TextField();
-        crnEntryField.setPromptText("CRN (12345)");
-        crnEntryField.setLayoutX(62.5);
-        crnEntryField.setLayoutY(235);
-        crnEntryField.setPrefWidth(128);
-        crnEntryField.setOnKeyPressed(event -> {
-            if (event.getCode() == KeyCode.ESCAPE) crnEntryField.clear();
-        });
-
         Button add = new Button();
         add.setText("Add");
-        add.setPrefWidth(60);
-        add.setLayoutX(204);
+        add.setPrefWidth(48);
+        add.setLayoutX(169);
         add.setLayoutY(235);
         add.setOnMouseClicked(ParseCRN(Operation.AddClass));
 
         Button drop = new Button();
         drop.setText("Drop");
-        drop.setPrefWidth(60);
-        drop.setLayoutX(276.5);
+        drop.setPrefWidth(48);
+        drop.setLayoutX(220);
         drop.setLayoutY(235);
         drop.setOnMouseClicked(ParseCRN(Operation.DropClass));
+
+        Button submit = new Button();
+        submit.setText("Submit");
+        submit.setPrefWidth(65);
+        submit.setLayoutX(271);
+        submit.setLayoutY(235);
+        submit.setOnMouseClicked(ParseCRN(Operation.SubmitChanges));
 
         Button run = new Button();
         run.setText("Register!");
@@ -175,23 +197,28 @@ public class PaneOrganizer {
         borderRect.setStrokeWidth(3);
         borderRect.setFill(Color.TRANSPARENT);
 
-        root.getChildren().addAll(borderRect, title, usernameField, passwordField, advisingPinField, crnEntryField, usernameFailure, passwordFailure, pinFailure, crnFailure, add, drop, crnListView, run);
+        root.getChildren().addAll(borderRect, crnListView, title);
+        root.getChildren().addAll(usernameField, passwordField, advisingPinField, crnEntryField);
+        root.getChildren().addAll(usernameFailure, passwordFailure, pinFailure, crnFailure);
+        root.getChildren().addAll(add, drop, submit, run);
     }
 
     private EventHandler<MouseEvent> ParseCRN(Operation operation) {
         return event -> {
             String crn = crnEntryField.getText();
 
-            if (crn.isEmpty() || crn.length() != 5 || !tryNumericParse(crn)) {
-                crnFail.play();
-                return;
-            }
+            if (operation != Operation.SubmitChanges) {
+                if (crn.isEmpty() || crn.length() != 5 || !tryNumericParse(crn)) {
+                    crnFail.play();
+                    return;
+                }
 
-            String prefix = (operation == Operation.AddClass) ? "+ " : "- ";
-            listViewItems.add(prefix + crn);
+                String prefix = (operation == Operation.AddClass) ? "+ " : "- ";
+                listViewItems.add(prefix + crn);
+            } else listViewItems.add("* Submit Changes *");
+
             crnMapping.put(crn, operation);
             crnEntryField.clear();
-
             crnEntryField.requestFocus();
         };
     }
@@ -269,6 +296,9 @@ public class PaneOrganizer {
 
                     Select selectable = new Select(candidates.get(0));
                     selectable.selectByVisibleText("DROP");
+                    break;
+                case SubmitChanges:
+                    actions.moveToElement(driver.findElement(By.xpath(".//input[contains(@value, 'Submit Changes')]"))).click().perform();
                     break;
             }
         }
