@@ -23,6 +23,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.ui.Select;
 
 import java.time.LocalDateTime;
 import java.util.*;
@@ -261,6 +262,8 @@ public class PaneOrganizer {
                     }
                     break;
                 case DropClass:
+                    Select dropdown = new Select(driver.findElement(By.xpath(".//select[./ancestor::td[./following-sibling::td[./child::input[contains(@value, '" + crn.getKey() + "')]]]]")));
+                    dropdown.selectByVisibleText("DROP");
                     break;
             }
         }
