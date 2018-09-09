@@ -50,6 +50,7 @@ public class PaneOrganizer {
     private ComboBox<String> minute;
 
     private FadeTransition emptyListFail;
+    private boolean initialized;
 
     PaneOrganizer() {
         root.setFocusTraversable(true);
@@ -206,7 +207,6 @@ public class PaneOrganizer {
         day.setPrefWidth(85);
         ObservableList<String> dayItems = FXCollections.observableArrayList();
         day.setItems(dayItems);
-        day.getSelectionModel().selectFirst();
         int length = LocalDateTime.now().getMonth().length(Year.of(LocalDateTime.now().getYear()).isLeap());
         for (int i = 0; i < length; i++) dayItems.add(String.valueOf(i + 1));
 
@@ -215,7 +215,6 @@ public class PaneOrganizer {
         hour.setLayoutX(157.5);
         hour.setLayoutY(640);
         hour.setPrefWidth(85);
-        hour.getSelectionModel().selectFirst();
         ObservableList<String> hours = FXCollections.observableArrayList();
         hour.setItems(hours);
         for (int i = 0; i < 24; i++) hours.add(String.valueOf(i));
@@ -228,7 +227,6 @@ public class PaneOrganizer {
         minute.setLayoutX(252.5);
         minute.setLayoutY(640);
         minute.setPrefWidth(85);
-        minute.getSelectionModel().selectFirst();
         minute.setItems(sixty);
 
         root.getChildren().addAll(borderRect, crnListView, title);
@@ -268,6 +266,8 @@ public class PaneOrganizer {
     }
 
     public void run() {
+        CourseRegistration.stage.hide();
+
         boolean noUsername = usernameField.getText().isEmpty();
         boolean noPassword = passwordField.getText().isEmpty();
         String pin = advisingPinField.getText();
@@ -318,6 +318,7 @@ public class PaneOrganizer {
         while (LocalDateTime.now().isBefore(LocalDateTime.of(LocalDateTime.now().getYear(), LocalDateTime.now().getMonth(), selectedDay, selectedHour, selectedMinute))) actions.pause(java.time.Duration.ofMillis(50)).perform();
 
         submitPin.click();
+
         Iterator<WebElement> crns = driver.findElements(By.xpath(".//input[contains(@id, 'crn_')]")).iterator();
 
         for (Map.Entry<String, Operation> crn : crnMapping.entrySet()) {
@@ -342,6 +343,9 @@ public class PaneOrganizer {
             }
         }
 
+        if (driver.findElements(By.xpath("Registration")).isEmpty())
+
+        CourseRegistration.stage.show();
     }
 
 }

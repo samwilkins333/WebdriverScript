@@ -5,7 +5,7 @@ import javafx.scene.Scene;
 import javafx.stage.Stage;
 
 public class CourseRegistration extends Application {
-    public Stage stage = new Stage();
+    public static Stage stage = new Stage();
 
     @Override
     public void start(Stage primaryStage) {
