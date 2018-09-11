@@ -1,11 +1,12 @@
 package CourseRegistration;
 
 import javafx.application.Application;
+import javafx.application.Platform;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 
 public class CourseRegistration extends Application {
-    public static Stage stage = new Stage();
+    private Stage stage = new Stage();
 
     @Override
     public void start(Stage primaryStage) {

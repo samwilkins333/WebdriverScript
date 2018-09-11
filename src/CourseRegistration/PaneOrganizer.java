@@ -24,7 +24,10 @@ import org.openqa.selenium.support.ui.Select;
 
 import java.time.LocalDateTime;
 import java.time.Year;
-import java.util.*;
+import java.util.Iterator;
+import java.util.LinkedHashMap;
+import java.util.List;
+import java.util.Map;
 
 import static CourseRegistration.Constants.chrome;
 import static CourseRegistration.Constants.driverPath;
@@ -50,7 +53,6 @@ public class PaneOrganizer {
     private ComboBox<String> minute;
 
     private FadeTransition emptyListFail;
-    private boolean initialized;
 
     PaneOrganizer() {
         root.setFocusTraversable(true);
@@ -266,8 +268,6 @@ public class PaneOrganizer {
     }
 
     public void run() {
-        CourseRegistration.stage.hide();
-
         boolean noUsername = usernameField.getText().isEmpty();
         boolean noPassword = passwordField.getText().isEmpty();
         String pin = advisingPinField.getText();
@@ -284,6 +284,10 @@ public class PaneOrganizer {
 
         if (noUsername || noPassword || !properPin || listViewItems.isEmpty()) return;
 
+        Launch();
+    }
+
+    private void Launch() {
         WebDriver driver = new ChromeDriver();
         Actions actions = new Actions(driver);
 
@@ -343,9 +347,7 @@ public class PaneOrganizer {
             }
         }
 
-        if (driver.findElements(By.xpath("Registration")).isEmpty())
-
-        CourseRegistration.stage.show();
+        if (driver.findElements(By.xpath("Error")).isEmpty()) System.exit(0);
     }
 
 }
