@@ -32,7 +32,7 @@ import java.util.Map;
 import static CourseRegistration.Constants.chrome;
 import static CourseRegistration.Constants.driverPath;
 
-public class PaneOrganizer {
+class PaneOrganizer {
     public Pane root = new Pane();
 
     private ObservableList<String> listViewItems = FXCollections.observableArrayList();
@@ -53,7 +53,7 @@ public class PaneOrganizer {
     private ComboBox<String> minute;
 
     private FadeTransition emptyListFail;
-
+ 
     PaneOrganizer() {
         root.setFocusTraversable(true);
         root.requestFocus();
@@ -250,7 +250,8 @@ public class PaneOrganizer {
 
                 String prefix = (operation == Operation.AddClass) ? "+ " : "- ";
                 listViewItems.add(prefix + crn);
-            } else listViewItems.add("* Submit Changes *");
+            } else
+                listViewItems.add("* Submit Changes *");
 
             crnMapping.put(crn, operation);
             crnEntryField.clear();

@@ -12,7 +12,7 @@ import java.util.Scanner;
 
 import static CreateDictionary.Constants.*;
 
-public class MapDefinitions {
+class MapDefinitions {
 
     public static void main(String[] args) {
         try {

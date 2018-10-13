@@ -12,7 +12,7 @@ import java.util.stream.Collectors;
 
 import static CreateDictionary.Constants.*;
 
-public class CreateDictionary {
+class CreateDictionary {
 
     public static void main(String[] args) {
         long startTime = System.currentTimeMillis();
