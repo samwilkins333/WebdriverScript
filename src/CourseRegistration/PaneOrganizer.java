@@ -312,17 +312,20 @@ class PaneOrganizer {
         driver.findElement(By.xpath(".//a[contains(@href, 'AltPin')]")).click();
         driver.findElement(By.xpath(".//input[contains(@value, 'Submit')]")).click();
 
-        WebElement pinEl = driver.findElement(By.xpath(".//input[contains(@id, 'apin_id')]"));
-        pinEl.click();
-        pinEl.sendKeys(advisingPinField.getText());
-        WebElement submitPin = driver.findElement(By.xpath(".//input[contains(@value, 'Submit')]"));
+        List<WebElement> pinEls = driver.findElements(By.xpath(".//input[contains(@id, 'apin_id')]"));
+        if (pinEls.size() > 0) {
+            WebElement pinEl = pinEls.get(0);
+            pinEl.click();
+            pinEl.sendKeys(advisingPinField.getText());
+            WebElement submitPin = driver.findElement(By.xpath(".//input[contains(@value, 'Submit')]"));
 
-        int selectedDay = Integer.parseInt(day.getSelectionModel().getSelectedItem());
-        int selectedHour = Integer.parseInt(hour.getSelectionModel().getSelectedItem());
-        int selectedMinute = Integer.parseInt(minute.getSelectionModel().getSelectedItem());
-        while (LocalDateTime.now().isBefore(LocalDateTime.of(LocalDateTime.now().getYear(), LocalDateTime.now().getMonth(), selectedDay, selectedHour, selectedMinute))) actions.pause(java.time.Duration.ofMillis(50)).perform();
+            int selectedDay = Integer.parseInt(day.getSelectionModel().getSelectedItem());
+            int selectedHour = Integer.parseInt(hour.getSelectionModel().getSelectedItem());
+            int selectedMinute = Integer.parseInt(minute.getSelectionModel().getSelectedItem());
+            while (LocalDateTime.now().isBefore(LocalDateTime.of(LocalDateTime.now().getYear(), LocalDateTime.now().getMonth(), selectedDay, selectedHour, selectedMinute))) actions.pause(java.time.Duration.ofMillis(50)).perform();
 
-        submitPin.click();
+            submitPin.click();
+        }
 
         Iterator<WebElement> crns = driver.findElements(By.xpath(".//input[contains(@id, 'crn_')]")).iterator();
 

@@ -16,8 +16,6 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="Apache Commons IO" />
-        <module name="okhttp" />
         <module name="textmagicjavasdk" />
       </profile>
     </annotationProcessing>
