@@ -293,7 +293,7 @@ class PaneOrganizer {
         Actions actions = new Actions(driver);
 
         driver.get("https://selfservice.brown.edu");
-        driver.manage().window().maximize();
+        //driver.manage().window().maximize();
 
         WebElement username = driver.findElement(By.xpath(".//input[contains(@id, 'username')]"));
         username.click();
@@ -319,13 +319,15 @@ class PaneOrganizer {
             pinEl.sendKeys(advisingPinField.getText());
             WebElement submitPin = driver.findElement(By.xpath(".//input[contains(@value, 'Submit')]"));
 
-            int selectedDay = Integer.parseInt(day.getSelectionModel().getSelectedItem());
-            int selectedHour = Integer.parseInt(hour.getSelectionModel().getSelectedItem());
-            int selectedMinute = Integer.parseInt(minute.getSelectionModel().getSelectedItem());
-            while (LocalDateTime.now().isBefore(LocalDateTime.of(LocalDateTime.now().getYear(), LocalDateTime.now().getMonth(), selectedDay, selectedHour, selectedMinute))) actions.pause(java.time.Duration.ofMillis(50)).perform();
+            //int selectedDay = Integer.parseInt(day.getSelectionModel().getSelectedItem());
+            //int selectedHour = Integer.parseInt(hour.getSelectionModel().getSelectedItem());
+            //int selectedMinute = Integer.parseInt(minute.getSelectionModel().getSelectedItem());
+            //while (LocalDateTime.now().isBefore(LocalDateTime.of(LocalDateTime.now().getYear(), LocalDateTime.now().getMonth(), selectedDay, selectedHour, selectedMinute, 0))) actions.pause(java.time.Duration.ofMillis(50)).perform();
 
             submitPin.click();
         }
+
+        while (!driver.findElements(By.xpath(".//input[contains(@id, 'crn_')]")).iterator().hasNext()) driver.navigate().refresh();
 
         Iterator<WebElement> crns = driver.findElements(By.xpath(".//input[contains(@id, 'crn_')]")).iterator();
 

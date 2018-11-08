@@ -2,14 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ddcb0488-833e-46b0-b81c-d5b44f7c4c69" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/WebdriverScript/CourseRegistration/PaneOrganizer.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/WebdriverScript/CourseRegistration/PaneOrganizer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/WebdriverScript/CreateDictionary/ConfirmCount.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/WebdriverScript/CreateDictionary/ConfirmCount.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/WebdriverScript/CreateDictionary/CreateDictionary.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/WebdriverScript/CreateDictionary/CreateDictionary.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/WebdriverScript/CreateDictionary/MapDefinitions.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/WebdriverScript/CreateDictionary/MapDefinitions.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/CourseRegistration/PaneOrganizer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/CourseRegistration/PaneOrganizer.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -27,15 +21,16 @@
     <session id="-1730975750">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="31" />
+          <entry key="project.closed" value="35" />
           <entry key="project.open.time.1" value="1" />
-          <entry key="project.open.time.16" value="2" />
+          <entry key="project.open.time.15" value="1" />
+          <entry key="project.open.time.16" value="3" />
           <entry key="project.open.time.17" value="7" />
           <entry key="project.open.time.18" value="4" />
-          <entry key="project.open.time.19" value="4" />
+          <entry key="project.open.time.19" value="5" />
           <entry key="project.open.time.2" value="1" />
-          <entry key="project.open.time.20" value="4" />
-          <entry key="project.open.time.21" value="3" />
+          <entry key="project.open.time.20" value="5" />
+          <entry key="project.open.time.21" value="4" />
           <entry key="project.open.time.22" value="2" />
           <entry key="project.open.time.23" value="3" />
           <entry key="project.open.time.25" value="1" />
@@ -43,19 +38,19 @@
           <entry key="project.open.time.28" value="2" />
           <entry key="project.open.time.32" value="1" />
           <entry key="project.open.time.7" value="1" />
-          <entry key="project.opened" value="37" />
+          <entry key="project.opened" value="42" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="java" value="17005" />
+          <entry key="java" value="17208" />
           <entry key="txt" value="54" />
           <entry key="xml" value="4" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="17005" />
+          <entry key="JAVA" value="17208" />
           <entry key="PLAIN_TEXT" value="54" />
           <entry key="XML" value="4" />
         </counts>
@@ -87,7 +82,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/CourseRegistration/CourseRegistration.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="315">
+            <state relative-caret-position="285">
               <caret line="23" column="1" selection-start-line="23" selection-start-column="1" selection-end-line="23" selection-end-column="1" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -99,8 +94,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/CourseRegistration/PaneOrganizer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="165">
-              <caret line="317" column="26" lean-forward="true" selection-start-line="317" selection-start-column="26" selection-end-line="317" selection-end-column="26" />
+            <state relative-caret-position="507">
+              <caret line="322" column="41" selection-start-line="322" selection-start-column="41" selection-end-line="322" selection-end-column="41" />
             </state>
           </provider>
         </entry>
@@ -127,6 +122,8 @@
       <find>passwordField</find>
       <find>drop</find>
       <find>date</find>
+      <find>submit</find>
+      <find>register</find>
     </findStrings>
     <replaceStrings>
       <replace>public</replace>
@@ -225,7 +222,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
       <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
@@ -238,6 +234,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -246,7 +243,7 @@
     <property name="Repository.Attach.Sources" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1539394600795" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1541704889016" />
     <property name="last_directory_selection" value="$PROJECT_DIR$/src" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
@@ -379,6 +376,11 @@
       <workItem from="1539392307144" duration="389000" />
       <workItem from="1539393024551" duration="966000" />
       <workItem from="1539394004638" duration="544000" />
+      <workItem from="1541641246162" duration="18000" />
+      <workItem from="1541641636723" duration="440000" />
+      <workItem from="1541658761729" duration="1886000" />
+      <workItem from="1541681690895" duration="1047000" />
+      <workItem from="1541694193868" duration="1178000" />
     </task>
     <task id="LOCAL-00001" summary="More print lines for feedback">
       <created>1535096345166</created>
@@ -398,13 +400,13 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="109511000" />
+    <option name="totallyTimeSpent" value="114080000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1440" height="834" extended-state="6" />
+    <frame x="0" y="23" width="1440" height="835" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.3104435" />
+      <window_info content_ui="combo" id="Project" order="0" weight="0.32331902" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -415,7 +417,7 @@
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32891566" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.3292517" />
-      <window_info active="true" anchor="bottom" id="Debug" order="3" sideWeight="0.49928468" visible="true" weight="0.39487872" />
+      <window_info active="true" anchor="bottom" id="Debug" order="3" sideWeight="0.49928468" visible="true" weight="0.39434725" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -571,9 +573,14 @@
     <entry file="file://$PROJECT_DIR$/Apache Commons IO/pom.xml">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
+    <entry file="file://$PROJECT_DIR$/WebdriverScript.iml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1098" />
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/CourseRegistration/CourseRegistration.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
+        <state relative-caret-position="285">
           <caret line="23" column="1" selection-start-line="23" selection-start-column="1" selection-end-line="23" selection-end-column="1" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -581,15 +588,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/WebdriverScript.iml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1098" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/CourseRegistration/PaneOrganizer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="317" column="26" lean-forward="true" selection-start-line="317" selection-start-column="26" selection-end-line="317" selection-end-column="26" />
+        <state relative-caret-position="507">
+          <caret line="322" column="41" selection-start-line="322" selection-start-column="41" selection-end-line="322" selection-end-column="41" />
         </state>
       </provider>
     </entry>
