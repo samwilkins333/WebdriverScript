@@ -44,6 +44,7 @@ class PaneOrganizer {
     private FadeTransition passwordFail;
     private FadeTransition pinFail;
     private FadeTransition crnFail;
+    private Label _title;
 
     private FadeTransition emptyListFail;
 
@@ -71,11 +72,11 @@ class PaneOrganizer {
             }
         });
 
-        Label title = new Label("Registration Wizard");
-        title.setFont(Font.font("Georgia", FontWeight.BOLD, 25));
-        title.setLayoutY(55);
-        title.setLayoutX(70);
-        title.requestFocus();
+        _title = new Label("Registration Wizard");
+        _title.setFont(Font.font("Georgia", FontWeight.BOLD, 25));
+        _title.setLayoutY(55);
+        _title.setLayoutX(70);
+        _title.requestFocus();
 
         usernameField = new TextField();
         usernameField.setPromptText("Brown username...");
@@ -192,7 +193,7 @@ class PaneOrganizer {
         run.setLayoutX(62.5);
         run.setLayoutY(640);
         run.setPrefSize(275, 45);
-        run.setOnMouseClicked(event -> run(run));
+        run.setOnMouseClicked(event -> run());
 
         Button quit = new Button();
         quit.setText("Quit!");
@@ -207,7 +208,7 @@ class PaneOrganizer {
         _borderRect.setStrokeWidth(3);
         _borderRect.setFill(Color.TRANSPARENT);
 
-        root.getChildren().addAll(_borderRect, crnListView, title);
+        root.getChildren().addAll(_borderRect, crnListView, _title);
         root.getChildren().addAll(usernameField, passwordField, advisingPinField, crnEntryField);
         root.getChildren().addAll(usernameFailure, passwordFailure, pinFailure, crnFailure);
         root.getChildren().addAll(add, drop, submit, run, quit);
@@ -243,7 +244,7 @@ class PaneOrganizer {
         return true;
     }
 
-    public void run(Button run) {
+    public void run() {
         boolean noUsername = usernameField.getText().isEmpty();
         boolean noPassword = passwordField.getText().isEmpty();
         String pin = advisingPinField.getText();
@@ -260,8 +261,6 @@ class PaneOrganizer {
 
         if (noUsername || noPassword || !properPin || listViewItems.isEmpty()) return;
 
-        run.setTextFill(Color.GREEN);
-        run.setFont(Font.font("Arial", FontWeight.BOLD, 14));
         Launch();
     }
 
@@ -328,7 +327,9 @@ class PaneOrganizer {
         }
 
         boolean success = driver.findElements(By.xpath(".//span[contains(@class, 'errortext')]")).isEmpty();
-        _borderRect.setStroke(success ? Color.GREEN : Color.RED);
+        String green = "-fx-background-color: lawngreen;";
+        String red = "-fx-background-color: red;";
+        root.setStyle(success ? green : red);
     }
 
 }
