@@ -15,15 +15,11 @@ import javafx.scene.shape.StrokeLineCap;
 import javafx.scene.text.Font;
 import javafx.scene.text.FontWeight;
 import javafx.util.Duration;
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
+import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.Select;
 
-import java.time.LocalDateTime;
-import java.time.Year;
 import java.util.Iterator;
 import java.util.LinkedHashMap;
 import java.util.List;
@@ -34,6 +30,7 @@ import static CourseRegistration.Constants.driverPath;
 
 class PaneOrganizer {
     public Pane root = new Pane();
+    private Rectangle _borderRect;
 
     private ObservableList<String> listViewItems = FXCollections.observableArrayList();
     private LinkedHashMap<String, Operation> crnMapping = new LinkedHashMap<>();
@@ -48,13 +45,13 @@ class PaneOrganizer {
     private FadeTransition pinFail;
     private FadeTransition crnFail;
 
-    private ComboBox<String> day;
-    private ComboBox<String> hour;
-    private ComboBox<String> minute;
-
     private FadeTransition emptyListFail;
+
+    private double _screenX;
+    private double _height;
  
-    PaneOrganizer() {
+    PaneOrganizer(double screenX, double screenY) {
+        _screenX = screenX;
         root.setFocusTraversable(true);
         root.requestFocus();
 
@@ -193,49 +190,27 @@ class PaneOrganizer {
         Button run = new Button();
         run.setText("Register!");
         run.setLayoutX(62.5);
-        run.setLayoutY(680);
-        run.setPrefSize(275, 25);
-        run.setOnMouseClicked(event -> run());
+        run.setLayoutY(640);
+        run.setPrefSize(275, 45);
+        run.setOnMouseClicked(event -> run(run));
 
-        Rectangle borderRect = new Rectangle(20, 20, 360, 760);
-        borderRect.setStroke(Color.BLACK);
-        borderRect.setStrokeWidth(3);
-        borderRect.setFill(Color.TRANSPARENT);
+        Button quit = new Button();
+        quit.setText("Quit!");
+        quit.setLayoutX(62.5);
+        quit.setLayoutY(697);
+        quit.setPrefSize(275, 25);
+        quit.setOnMouseClicked(event -> System.exit(0));
 
-        day = new ComboBox<>();
-        day.setPromptText("Day");
-        day.setLayoutX(62.5);
-        day.setLayoutY(640);
-        day.setPrefWidth(85);
-        ObservableList<String> dayItems = FXCollections.observableArrayList();
-        day.setItems(dayItems);
-        int length = LocalDateTime.now().getMonth().length(Year.of(LocalDateTime.now().getYear()).isLeap());
-        for (int i = 0; i < length; i++) dayItems.add(String.valueOf(i + 1));
+        _height = screenY - 40 - 87;
+        _borderRect = new Rectangle(20, 20, 360, _height);
+        _borderRect.setStroke(Color.BLACK);
+        _borderRect.setStrokeWidth(3);
+        _borderRect.setFill(Color.TRANSPARENT);
 
-        hour = new ComboBox<>();
-        hour.setPromptText("Hour");
-        hour.setLayoutX(157.5);
-        hour.setLayoutY(640);
-        hour.setPrefWidth(85);
-        ObservableList<String> hours = FXCollections.observableArrayList();
-        hour.setItems(hours);
-        for (int i = 0; i < 24; i++) hours.add(String.valueOf(i));
-
-        ObservableList<String> sixty = FXCollections.observableArrayList();
-        for (int i = 0; i < 60; i++) sixty.add(i < 10 ? "0" + String.valueOf(i) : String.valueOf(i));
-
-        minute = new ComboBox<>();
-        minute.setPromptText("Min");
-        minute.setLayoutX(252.5);
-        minute.setLayoutY(640);
-        minute.setPrefWidth(85);
-        minute.setItems(sixty);
-
-        root.getChildren().addAll(borderRect, crnListView, title);
+        root.getChildren().addAll(_borderRect, crnListView, title);
         root.getChildren().addAll(usernameField, passwordField, advisingPinField, crnEntryField);
         root.getChildren().addAll(usernameFailure, passwordFailure, pinFailure, crnFailure);
-        root.getChildren().addAll(day, hour, minute);
-        root.getChildren().addAll(add, drop, submit, run);
+        root.getChildren().addAll(add, drop, submit, run, quit);
     }
 
     private EventHandler<MouseEvent> ParseCRN(Operation operation) {
@@ -268,7 +243,7 @@ class PaneOrganizer {
         return true;
     }
 
-    public void run() {
+    public void run(Button run) {
         boolean noUsername = usernameField.getText().isEmpty();
         boolean noPassword = passwordField.getText().isEmpty();
         String pin = advisingPinField.getText();
@@ -285,6 +260,8 @@ class PaneOrganizer {
 
         if (noUsername || noPassword || !properPin || listViewItems.isEmpty()) return;
 
+        run.setTextFill(Color.GREEN);
+        run.setFont(Font.font("Arial", FontWeight.BOLD, 14));
         Launch();
     }
 
@@ -292,8 +269,10 @@ class PaneOrganizer {
         WebDriver driver = new ChromeDriver();
         Actions actions = new Actions(driver);
 
+        driver.manage().window().setPosition(new Point(400, 65));
+        driver.manage().window().setSize(new Dimension((int) _screenX - 420, (int)_height));
+
         driver.get("https://selfservice.brown.edu");
-        //driver.manage().window().maximize();
 
         WebElement username = driver.findElement(By.xpath(".//input[contains(@id, 'username')]"));
         username.click();
@@ -317,17 +296,12 @@ class PaneOrganizer {
             WebElement pinEl = pinEls.get(0);
             pinEl.click();
             pinEl.sendKeys(advisingPinField.getText());
-            WebElement submitPin = driver.findElement(By.xpath(".//input[contains(@value, 'Submit')]"));
-
-            //int selectedDay = Integer.parseInt(day.getSelectionModel().getSelectedItem());
-            //int selectedHour = Integer.parseInt(hour.getSelectionModel().getSelectedItem());
-            //int selectedMinute = Integer.parseInt(minute.getSelectionModel().getSelectedItem());
-            //while (LocalDateTime.now().isBefore(LocalDateTime.of(LocalDateTime.now().getYear(), LocalDateTime.now().getMonth(), selectedDay, selectedHour, selectedMinute, 0))) actions.pause(java.time.Duration.ofMillis(50)).perform();
-
-            submitPin.click();
+            driver.findElement(By.xpath(".//input[contains(@value, 'Submit')]")).click();
         }
 
-        while (!driver.findElements(By.xpath(".//input[contains(@id, 'crn_')]")).iterator().hasNext()) driver.navigate().refresh();
+        while (!driver.findElements(By.xpath(".//input[contains(@id, 'crn_')]")).iterator().hasNext()) {
+            driver.navigate().refresh();
+        }
 
         Iterator<WebElement> crns = driver.findElements(By.xpath(".//input[contains(@id, 'crn_')]")).iterator();
 
@@ -353,7 +327,8 @@ class PaneOrganizer {
             }
         }
 
-        if (driver.findElements(By.xpath("Error")).isEmpty()) System.exit(0);
+        boolean success = driver.findElements(By.xpath(".//span[contains(@class, 'errortext')]")).isEmpty();
+        _borderRect.setStroke(success ? Color.GREEN : Color.RED);
     }
 
 }

@@ -2,8 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ddcb0488-833e-46b0-b81c-d5b44f7c4c69" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/dictionaries/swilkinss2012.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dictionaries/swilkinss2012.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/WebdriverScript/CourseRegistration/PaneOrganizer.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/WebdriverScript/CourseRegistration/PaneOrganizer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/WebdriverScript/CourseRegistration/CourseRegistration.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/WebdriverScript/CourseRegistration/CourseRegistration.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/WebdriverScript/CourseRegistration/PaneOrganizer$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/WebdriverScript/CourseRegistration/PaneOrganizer.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/CourseRegistration/CourseRegistration.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/CourseRegistration/CourseRegistration.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/CourseRegistration/PaneOrganizer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/CourseRegistration/PaneOrganizer.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -21,8 +25,9 @@
     <session id="-1730975750">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="35" />
+          <entry key="project.closed" value="36" />
           <entry key="project.open.time.1" value="1" />
+          <entry key="project.open.time.14" value="1" />
           <entry key="project.open.time.15" value="1" />
           <entry key="project.open.time.16" value="3" />
           <entry key="project.open.time.17" value="7" />
@@ -38,19 +43,19 @@
           <entry key="project.open.time.28" value="2" />
           <entry key="project.open.time.32" value="1" />
           <entry key="project.open.time.7" value="1" />
-          <entry key="project.opened" value="42" />
+          <entry key="project.opened" value="43" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="java" value="17208" />
+          <entry key="java" value="18129" />
           <entry key="txt" value="54" />
           <entry key="xml" value="4" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="17208" />
+          <entry key="JAVA" value="18129" />
           <entry key="PLAIN_TEXT" value="54" />
           <entry key="XML" value="4" />
         </counts>
@@ -82,8 +87,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/CourseRegistration/CourseRegistration.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
-              <caret line="23" column="1" selection-start-line="23" selection-start-column="1" selection-end-line="23" selection-end-column="1" />
+            <state relative-caret-position="180">
+              <caret line="16" column="42" selection-start-line="16" selection-start-column="42" selection-end-line="16" selection-end-column="42" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -94,8 +99,11 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/CourseRegistration/PaneOrganizer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="507">
-              <caret line="322" column="41" selection-start-line="322" selection-start-column="41" selection-end-line="322" selection-end-column="41" />
+            <state relative-caret-position="517">
+              <caret line="328" lean-forward="true" selection-start-line="328" selection-end-line="328" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -124,6 +132,9 @@
       <find>date</find>
       <find>submit</find>
       <find>register</find>
+      <find>app</find>
+      <find>main</find>
+      <find>height</find>
     </findStrings>
     <replaceStrings>
       <replace>public</replace>
@@ -155,10 +166,10 @@
         <option value="$PROJECT_DIR$/src/CourseRegistration/crnEntry.java" />
         <option value="$PROJECT_DIR$/src/CourseRegistration/Operation.java" />
         <option value="$PROJECT_DIR$/src/CourseRegistration/crnCell.java" />
-        <option value="$PROJECT_DIR$/src/CourseRegistration/CourseRegistration.java" />
         <option value="$PROJECT_DIR$/src/CreateDictionary/ConfirmCount.java" />
         <option value="$PROJECT_DIR$/src/CreateDictionary/CreateDictionary.java" />
         <option value="$PROJECT_DIR$/src/CreateDictionary/MapDefinitions.java" />
+        <option value="$PROJECT_DIR$/src/CourseRegistration/CourseRegistration.java" />
         <option value="$PROJECT_DIR$/src/CourseRegistration/PaneOrganizer.java" />
       </list>
     </option>
@@ -222,6 +233,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
       <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
@@ -230,11 +242,21 @@
               <item name="WebdriverScript" type="b2602c69:ProjectViewProjectNode" />
               <item name="WebdriverScript" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="WebdriverScript" type="b2602c69:ProjectViewProjectNode" />
+              <item name="WebdriverScript" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="WebdriverScript" type="b2602c69:ProjectViewProjectNode" />
+              <item name="WebdriverScript" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="CourseRegistration" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -243,13 +265,13 @@
     <property name="Repository.Attach.Sources" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1541704889016" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1541709286496" />
     <property name="last_directory_selection" value="$PROJECT_DIR$/src" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
-    <property name="settings.editor.selected.configurable" value="MavenSettings" />
+    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
   </component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
@@ -381,6 +403,7 @@
       <workItem from="1541658761729" duration="1886000" />
       <workItem from="1541681690895" duration="1047000" />
       <workItem from="1541694193868" duration="1178000" />
+      <workItem from="1541709983000" duration="558000" />
     </task>
     <task id="LOCAL-00001" summary="More print lines for feedback">
       <created>1535096345166</created>
@@ -400,10 +423,10 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="114080000" />
+    <option name="totallyTimeSpent" value="118589000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1440" height="835" extended-state="6" />
+    <frame x="0" y="23" width="1440" height="836" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" weight="0.32331902" />
@@ -417,7 +440,7 @@
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32891566" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.3292517" />
-      <window_info active="true" anchor="bottom" id="Debug" order="3" sideWeight="0.49928468" visible="true" weight="0.39434725" />
+      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49928468" weight="0.39381722" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -425,7 +448,7 @@
       <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Terminal" order="9" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5007153" side_tool="true" weight="0.39811066" />
-      <window_info anchor="bottom" id="Messages" order="11" weight="0.32880434" />
+      <window_info anchor="bottom" id="Messages" order="11" weight="0.32839838" />
       <window_info anchor="bottom" id="Inspection Results" order="12" weight="0.32928476" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -580,8 +603,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/CourseRegistration/CourseRegistration.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="23" column="1" selection-start-line="23" selection-start-column="1" selection-end-line="23" selection-end-column="1" />
+        <state relative-caret-position="180">
+          <caret line="16" column="42" selection-start-line="16" selection-start-column="42" selection-end-line="16" selection-end-column="42" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -590,8 +613,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/CourseRegistration/PaneOrganizer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="507">
-          <caret line="322" column="41" selection-start-line="322" selection-start-column="41" selection-end-line="322" selection-end-column="41" />
+        <state relative-caret-position="517">
+          <caret line="328" lean-forward="true" selection-start-line="328" selection-end-line="328" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
