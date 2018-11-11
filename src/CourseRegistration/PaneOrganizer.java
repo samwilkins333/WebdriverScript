@@ -30,7 +30,6 @@ import static CourseRegistration.Constants.driverPath;
 
 class PaneOrganizer {
     public Pane root = new Pane();
-    private Rectangle _borderRect;
 
     private ObservableList<String> listViewItems = FXCollections.observableArrayList();
     private LinkedHashMap<String, Operation> crnMapping = new LinkedHashMap<>();
@@ -44,7 +43,6 @@ class PaneOrganizer {
     private FadeTransition passwordFail;
     private FadeTransition pinFail;
     private FadeTransition crnFail;
-    private Label _title;
 
     private FadeTransition emptyListFail;
 
@@ -72,7 +70,7 @@ class PaneOrganizer {
             }
         });
 
-        _title = new Label("Registration Wizard");
+        Label _title = new Label("Registration Wizard");
         _title.setFont(Font.font("Georgia", FontWeight.BOLD, 25));
         _title.setLayoutY(55);
         _title.setLayoutX(70);
@@ -203,12 +201,12 @@ class PaneOrganizer {
         quit.setOnMouseClicked(event -> System.exit(0));
 
         _height = screenY - 40 - 87;
-        _borderRect = new Rectangle(20, 20, 360, _height);
-        _borderRect.setStroke(Color.BLACK);
-        _borderRect.setStrokeWidth(3);
-        _borderRect.setFill(Color.TRANSPARENT);
+        Rectangle borderRect = new Rectangle(20, 20, 360, _height);
+        borderRect.setStroke(Color.BLACK);
+        borderRect.setStrokeWidth(3);
+        borderRect.setFill(Color.TRANSPARENT);
 
-        root.getChildren().addAll(_borderRect, crnListView, _title);
+        root.getChildren().addAll(borderRect, crnListView, _title);
         root.getChildren().addAll(usernameField, passwordField, advisingPinField, crnEntryField);
         root.getChildren().addAll(usernameFailure, passwordFailure, pinFailure, crnFailure);
         root.getChildren().addAll(add, drop, submit, run, quit);
